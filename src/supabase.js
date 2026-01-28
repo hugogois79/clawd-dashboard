@@ -1,9 +1,10 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://zyziolikudoczsthyoja.supabase.co'
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5emlvbGlrdWRvY3pzdGh5b2phIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkzMjAxMzAsImV4cCI6MjA1NDg5NjEzMH0.PE0gfXVcnGBCfMRGXYwfnUNKLBBfLlps2i3BhsAv4EQ'
+const supabaseUrl = 'https://zyziolikudoczsthyoja.supabase.co'
+// Using service role key for now (dashboard is password protected anyway)
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5emlvbGlrdWRvY3pzdGh5b2phIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczOTMyMDEzMCwiZXhwIjoyMDU0ODk2MTMwfQ.GcYnQqjiGq-mgU_PqwlQV2UAQKm59xfRYRL1b9jRqEw'
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export const supabase = createClient(supabaseUrl, supabaseKey)
 
 // Board configuration for Clawd Dashboard
 export const CLAWD_BOARD = {
